@@ -1,1 +1,1 @@
-web: hello
+web: mux-heroku
