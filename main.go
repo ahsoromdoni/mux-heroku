@@ -2,10 +2,8 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"net/http"
 	"os"
-	"strings"
 
 	"github.com/gorilla/mux"
 )
@@ -34,12 +32,8 @@ func resolveAddress(addr []string) string {
 	}
 }
 
-var DefaultWriter io.Writer = os.Stdout
-
 func debugPrint(format string, values ...interface{}) {
-	if !strings.HasSuffix(format, "\n") {
-		format += "\n"
-	}
+	fmt.Println(format)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
