@@ -10,7 +10,6 @@ import (
 
 func main() {
 	r := mux.NewRouter()
-<<<<<<< HEAD
 	r.HandleFunc("/ping", handler).Methods("GET")
 	http.Handle("/", r)
 	address := resolveAddress([]string{})
@@ -31,11 +30,6 @@ func resolveAddress(addr []string) string {
 	default:
 		panic("too many parameters")
 	}
-=======
-	r.HandleFunc("/handler", handler).Methods("GET")
-	http.Handle("/",r)
-	http.ListenAndServe(nil, nil)
->>>>>>> e9a6f2c6e4f3188f0a0717d82be3de36238a6a8a
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
