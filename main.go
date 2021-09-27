@@ -20,7 +20,7 @@ func resolveAddress(addr []string) string {
 	switch len(addr) {
 	case 0:
 		if port := os.Getenv("PORT"); port != "" {
-			debugPrint("Environment variable PORT=\"%s\"", port)
+			debugPrint("Environment variable PORT=" + port)
 			return ":" + port
 		}
 		debugPrint("Environment variable PORT is undefined. Using port :8080 by default")
