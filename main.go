@@ -10,7 +10,7 @@ func main()  {
 	r := mux.NewRouter()
 	r.HandleFunc("/handler", handler).Methods("GET")
 	http.Handle("/",r)
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":", nil)
 }
 
 func handler(w http.ResponseWriter, r *http.Request)  {
